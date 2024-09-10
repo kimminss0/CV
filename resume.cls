@@ -9,20 +9,30 @@
 
 \usepackage{fontspec}
 
+\usepackage{fontawesome5}
+
 \usepackage{kotex}
 
 \pagestyle{empty}
 
-\setmainfont{Noto Sans}[UprightFont=* Light, BoldFont=* SemiBold, ItalicFont=*
-Light Italic]
+\setmainfont{Noto Sans}[
+  UprightFont=* Light,
+  BoldFont=* SemiBold,
+  ItalicFont=* Light Italic
+]
 
 \setmainhangulfont{Noto Sans CJK KR}[
-  UprightFont=* Light, BoldFont=* Bold,
-  Script=Hangul, Language=Korean, AutoFakeSlant,
+  UprightFont=* Light,
+  BoldFont=* Bold,
+  Script=Hangul,
+  Language=Korean,
+  AutoFakeSlant,
 ]
 \setsanshangulfont{Noto Sans CJK KR}[
-  UprightFont=* DemiLight, BoldFont=* Medium, 
-  Script=Hangul, Language=Korean
+  UprightFont=* Light,
+  BoldFont=* Bold,
+  Script=Hangul,
+  Language=Korean,
 ]
 \setmathhangulfont{Noto Sans CJK KR}[
   SizeFeatures={
@@ -46,9 +56,19 @@ Light Italic]
 \def \email#1{\def\@email{#1}}
 \def \@email {}
 
+\def \github#1{\def\@github{#1}}
+\def \@github {}
+
+\def \blog#1{\def\@blog{#1}}
+\def \@blog {}
+
 \def \printcontact{
   \begingroup
-    \centerline{\emailstyle \@email}
+    \centerline{
+      \faEnvelope\space\@email \space$\bullet$
+      \faGithubSquare\space\@github \space$\bullet$
+      \faHome\space\@blog
+    }
   \endgroup
 }
 
