@@ -15,42 +15,40 @@
 
 \pagestyle{empty}
 
-\setmainfont{Noto Sans}[
-  UprightFont=* Light,
-  BoldFont=* SemiBold,
-  ItalicFont=* Light Italic
+\setmainfont{NotoSans}[
+	UprightFont=*-Light,
+	BoldFont=*-SemiBold,
+	ItalicFont=*-LightItalic
 ]
 
-\setmainhangulfont{Noto Sans CJK KR}[
-  UprightFont=* Light,
-  BoldFont=* Bold,
-  Script=Hangul,
-  Language=Korean,
-  AutoFakeSlant,
+% our document is mainly in English, so we use punctuations from main font; not from hangul font
+\hangulpunctuations=0
+
+\setmainhangulfont{NotoSansCJKkr}[
+	UprightFont=*-Light,
+	BoldFont=*-Bold,
+	Script=Hangul,
+	Language=Korean,
+	AutoFakeSlant,
 ]
-\setsanshangulfont{Noto Sans CJK KR}[
-  UprightFont=* Light,
-  BoldFont=* Bold,
-  Script=Hangul,
-  Language=Korean,
-]
-\setmathhangulfont{Noto Sans CJK KR}[
-  SizeFeatures={
-    {Size=-6,  Font=* Medium},
-    {Size=6-9, Font=*},
-    {Size=9-,  Font=* DemiLight},
-  },
-  Script=Hangul, Language=Korean
+
+\setmathhangulfont{NotoSansCJKkr}[
+	SizeFeatures={
+			{Size=-6,  Font=*-Medium},
+			{Size=6-9, Font=*},
+			{Size=9-,  Font=*-DemiLight},
+		},
+	Script=Hangul, Language=Korean
 ]
 
 \def \name#1{\def\@name{#1}}
 \def \@name {}
 
 \def \printname {
-  \begingroup
-    \hfil{\namestyle\namesize \@name}\hfil
-    \nameskip\break
-  \endgroup
+	\begingroup
+	\hfil{\namestyle\namesize \@name}\hfil
+	\nameskip\break
+	\endgroup
 }
 
 \def \email#1{\def\@email{#1}}
@@ -63,46 +61,46 @@
 \def \@blog {}
 
 \def \printcontact{
-  \begingroup
-    \centerline{
-      \faEnvelope\space\@email \space$\bullet$
-      \faGithubSquare\space\@github \space$\bullet$
-      \faHome\space\@blog
-    }
-  \endgroup
+	\begingroup
+	\centerline{
+		\faEnvelope\space\@email \space$\bullet$
+		\faGithubSquare\space\@github \space$\bullet$
+		\faHome\space\@blog
+	}
+	\endgroup
 }
 
 \let\old@document=\document
 \renewcommand{\document}{
-  \old@document
-  \printname
-  \printcontact
+	\old@document
+	\printname
+	\printcontact
 }
 
 \newenvironment{rSection}[1]{
-  \sectionskipbefore
-  {\bfseries #1}
-  \sectionskipafter
-  \hrule
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-  }
-  \item[]
-}{
-  \end{list}
+	\sectionskipbefore
+	{\bfseries #1}
+	\sectionskipafter
+	\hrule
+	\begin{list}{}{
+			\setlength{\leftmargin}{1.5em}
+		}
+		\item[]
+		      }{
+	\end{list}
 }
 
 \newenvironment{rSubsection}[2]{
-  {\bfseries #1} \hfill {\small\it #2}
-  \begin{list}{--}{
-    \setlength{\leftmargin}{1.5em}
-    \setlength{\rightmargin}{1.5em}
-  }
-  \itemsep -0.5em \vspace{-0.5em}
-  \item[]
-}{
-  \end{list}
-  \vspace{0.2em}
+	{\bfseries #1} \hfill {\small\it #2}
+	\begin{list}{--}{
+			\setlength{\leftmargin}{1.5em}
+			\setlength{\rightmargin}{1.5em}
+		}
+		\itemsep -0.5em \vspace{-0.5em}
+		\item[]
+		      }{
+	\end{list}
+	\vspace{0.2em}
 }
 
 \def\namestyle{\bfseries}
