@@ -15,16 +15,14 @@
 
 \pagestyle{empty}
 
-\setmainfont{NotoSans}[
-	UprightFont=*-Light,
-	BoldFont=*-SemiBold,
-	ItalicFont=*-LightItalic
-]
+\let\oldbfseries\bfseries
+\renewcommand{\bfseries}{\oldbfseries\sffamily}
 
 % our document is mainly in English, so we use punctuations from main font; not from hangul font
 \hangulpunctuations=0
 
-\setmainhangulfont{NotoSansCJKkr}[
+\setsansfont{Helvetica}
+\setmainhangulfont{NotoSerifCJKkr}[
 	UprightFont=*-Light,
 	BoldFont=*-Bold,
 	Script=Hangul,
@@ -63,6 +61,7 @@
 \def \printcontact{
 	\begingroup
 	\centerline{
+		\contactstyle
 		\faEnvelope\space\@email \space$\bullet$
 		\faGithubSquare\space\@github \space$\bullet$
 		\faHome\space\@blog
@@ -91,7 +90,7 @@
 }
 
 \newenvironment{rEducation}[2]{
-	{#1} \hfill {\small\it #2}
+	{#1} \hfill {\small #2}
 	\begin{list}{--}{
 			\setlength{\leftmargin}{1.5em}
 			\setlength{\rightmargin}{1.5em}
@@ -104,7 +103,7 @@
 }
 
 \newenvironment{rSubsection}[2]{
-	{\bfseries #1} \hfill {\small\it #2}
+	{\bfseries #1} \hfill {\small #2}
 	\begin{list}{--}{
 			\setlength{\leftmargin}{1.5em}
 			\setlength{\rightmargin}{1.5em}
@@ -117,9 +116,9 @@
 }
 
 \def\namestyle{\bfseries}
+\def\contactstyle{\sffamily}
 \def\namesize{\huge}
 \def\nameskip{\bigskip}
-\def\emailstyle{\ttfamily}
 \def\sectionskipbefore{\medskip}
 \def\sectionskipafter{\medskip}
 \def\sectionskip{\medskip}
