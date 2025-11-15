@@ -12,18 +12,18 @@
 \begin{document}
 
 \begin{rSection}{Education}
-	\begin{rSubsection}{POSTECH (Pohang University of Science and Technology)}{Feb 2022 -- Present}
-		- Majoring in \href{https://cse.postech.ac.kr}{Computer Science and Engineering} \\
-	\end{rSubsection}
+	\begin{rEducation}{{\bfseries{B.S. in Computer Science and Engineering, POSTECH,}} South Korea}{Feb 2022 -- Present}
+	\end{rEducation}
 \end{rSection}
 
 \begin{rSection}{Skills}
 	\begin{tabular}{@{}p{0.25\linewidth}p{0.7\linewidth}}
 		Programming Languages
-		 & C, C++, Python, Go, Java, JavaScript        \\ [0.3em]
+		 & C, C++, Python, Go, Java, TypeScript        \\ [0.3em]
 
 		Web Development
-		 & HTML, CSS, JavaScript, React.js, Express.js \\ [0.3em]
+		 & HTML, CSS, React.js, Express.js, Next.js
+		                                               \\ [0.3em]
 
 		Database
 		 & PostgreSQL                                  \\ [0.3em]
@@ -40,31 +40,24 @@
 \end{rSection}
 
 \begin{rSection}{Job Experience}
-	\begin{rSubsection}{{Wordbricks LLC}}{Jun 2025 -- Aug 2025}
+	\begin{rSubsection}{\href{https://wordbricks.ai}{Wordbricks LLC}}{Jun 2025 -- Aug 2025}
 
 		{\bfseries\rmfamily{Intern Full-stack Engineer}}
 
-		\item Worked on:
+		\item Led and developed an LLM-based web crawling API and dashboard, owning the full product lifecycle including backend architecture and frontend implementation.
 
-		\vspace{-0.5em}
-		\begin{list}{--}{}
-			\itemsep -0.5em
-
-			\item LLM based web crawling API development
-
-			\item Dashboard for API usage monitoring and management
-		\end{list}
+		\item Skills: TypeScript, Next.js, Hono, Vercel AI SDK, Cloudflare Workers, Prisma, Supabase
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://dslab.postech.ac.kr/}{POSTECH Data Systems Lab}}{Jan 2023 -- Jan 2024}
 
-		{\bfseries\rmfamily{Intern Full-stack Engineer}}
+		{\bfseries\rmfamily{Undergraduate Researcher (Full-stack Web Developer)}}
 
-		\item Developed an website serving as an integrated database for PVLDB, an academic conference
+		\item Developed a website serving as an integrated database for PVLDB, an academic conference
 
 		\item Full-time during vacation; part-time during semester
 
-		\item Worked on:
+		\item Key Contributions:
 
 		\vspace{-0.5em}
 		\begin{list}{--}{}
@@ -80,34 +73,52 @@
 \end{rSection}
 
 \begin{rSection}{Projects}
-	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED311} {RISC-V CPU}}{Mar 2025 -- May 2025}
+	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED312} {Pintos}}{Sep 2025 -- Dec 2025}
 
-		RISC-V 5-Stage Pipelined CPU
+		Educational operating system on 80x86 architecture (based on Stanford CS140)
 
-		\item Team project implementing RISC-V 5-stage pipelined CPU with Verilog
+		\item Written in C and x86 assembly
 
-		\item Features:
+		% TODO: After finishing pintos, remove this single line description and replace into the detailed desc. below.
+		%\item Worked on threading, userspace program execution, and virtual memory
+		\item Key Implementations:
 		\vspace{-0.5em}
 		\begin{list}{--}{}
 			\itemsep -0.5em
 
-			\item Pipelined 5-stage execution
+			\item Kernel-level threading with priority scheduling and synchronization primitives (locks, semaphores)
+
+			\item System call handling for user program execution, including process management and file operations.
+
+			% TODO: This MIGHT be changed with my own languages. Replace with my implementation (if differs) and some notable feature of my own implementation.
+			\item Virtual memory system featuring demand paging, stack growth, and supplemental page tables.
+		\end{list}
+
+	\end{rSubsection}
+
+	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED311} {RISC-V CPU}}{Mar 2025 -- May 2025}
+
+		RISC-V 5-stage pipelined CPU in Verilog HDL (2-person team project)
+
+		\item Key Implementations:
+		\vspace{-0.5em}
+		\begin{list}{--}{}
+			\itemsep -0.5em
+
+			\item Hazard detection unit with data forwarding 
 
 			\item 2-Bit saturation counter branch predictor with pattern history table and globally shared history buffer (gshare)
 
 			\item Direct-mapped cache
-
 		\end{list}
 
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED353} {Sponge}}{Mar 2025 -- May 2025}
 
-		Educational Network Stack Development Project
+		Educational network stack development project (based on Stanford CS144)
 
-		\item Skill: C++
-
-		\item Features:
+		\item Key Implementations:
 		\vspace{-0.5em}
 		\begin{list}{--}{}
 			\itemsep -0.5em
@@ -117,27 +128,31 @@
 			\item Routing table lookup \& packet forwarding
 
 			\item ARP \& IP packet processing
-
 		\end{list}
 
+		\item Written in C++
 	\end{rSubsection}
 
-	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED321/tree/main/hw7} {Tiny ML}}{May 2025}
+	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED321/tree/main/hw7} {Tiny ML (TML) Compiler}}{May 2025}
 
-		Functional programming language based on \href{https://smlfamily.github.io}{Standard ML}
+		Designed and implemented a compiler backend that translates TML programs into machine code of a virtual machine Mach.
 
-		\item Designed and implemented a compiler that translates Tiny ML programs into the machine code of an abstract machine
+		\item Functional programming language based on \href{https://smlfamily.github.io}{Standard ML}
+
+		\item Compiler written in OCaml
+
+		\item Supports closures, higher-order and recursive functions, recursive datatypes and pattern matching
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/UniD3-Hackathon-Team4/barokey} {BaroKey}}{Nov 2023}
 
 		Team Project submitted to the 3rd UniDThon Hackathon Track
 
-		\item Developed a web service supplying users for real-time emergency keywords, such as safty threats or natural disasters, based on user's location
+		\item Developed a web service supplying users for real-time emergency keywords, such as safety threats or natural disasters, based on user's location
 
 		\item Skills: React.js, Express.js, PostgreSQL, Docker, Docker Compose
 
-		\item Role: Team Leader, Full-stack Developer
+		\item Role: Team Leader, Full-stack Developer (Led Backend \& Infrastructure)
 	\end{rSubsection}
 \end{rSection}
 

@@ -90,6 +90,19 @@
 	\end{list}
 }
 
+\newenvironment{rEducation}[2]{
+	{#1} \hfill {\small\it #2}
+	\begin{list}{--}{
+			\setlength{\leftmargin}{1.5em}
+			\setlength{\rightmargin}{1.5em}
+		}
+		\itemsep -0.5em \vspace{-0.5em}
+		\item[]
+		      }{
+	\end{list}
+	\vspace{0.2em}
+}
+
 \newenvironment{rSubsection}[2]{
 	{\bfseries #1} \hfill {\small\it #2}
 	\begin{list}{--}{
