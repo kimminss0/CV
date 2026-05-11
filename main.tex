@@ -3,16 +3,17 @@
 
 \usepackage{hyperref}
 
-\name{Minseo Kim}
+\name{Minseo Kim (김민서)}
 
 \email{\href{mailto:minseo@mskim.org}{minseo@mskim.org}}
 \github{\href{https://github.com/kimminss0}{kimminss0}}
 \blog{\href{https://blog.mskim.org}{blog.mskim.org}}
-
+%\mobile{\href{tel:+821012345678}{010-1234-5678}}
 \begin{document}
 
 \begin{rSection}{Education}
-	\begin{rEducation}{{\bfseries{B.S. in Computer Science and Engineering, POSTECH}}, South Korea}{Feb 2022 -- Present}
+	\begin{rEducation}{{\bfseries{POSTECH (포항공과대학교)}}}{Feb 2022 -- Present}
+		B.S. in Computer Science and Engineering (GPA: 3.70/4.3)
 	\end{rEducation}
 \end{rSection}
 
@@ -21,11 +22,11 @@
 		Programming Languages
 		 & C, C++, Python, Go, Java, TypeScript \\ [0.3em]
 
-		Systems
-		 & Linux, FreeBSD, GDB                  \\ [0.3em]
+		System
+		 & Linux, GDB                           \\ [0.3em]
 
 		Infrastructure
-		 & Docker, Docker Compose               \\ [0.3em]
+		 & Docker, Docker Compose, Nginx        \\ [0.3em]
 
 		Web
 		 & React.js, Next.js, Express.js        \\ [0.3em]
@@ -34,7 +35,7 @@
 		 & PostgreSQL                           \\ [0.3em]
 
 		Natural Languages
-		 & Korean (Native), English              \\ [0.3em]
+		 & Korean (Native), English             \\ [0.3em]
 	\end{tabular}
 \end{rSection}
 
@@ -43,42 +44,37 @@
 
 		{\bfseries{Intern Full-stack Engineer}}
 
-		\item Led and developed an LLM-based web crawling API and dashboard, owning the full product lifecycle including backend architecture and frontend implementation
+    \item LLM 기반 웹 크롤링 API 및 대시보드 개발 주도 (Product Owner)
 
-		\item Skills: TypeScript, Next.js, Hono, Vercel AI SDK, Cloudflare Workers, Prisma, Supabase
+		\item 기술 스택: TypeScript, Next.js, Hono, Vercel AI SDK, Cloudflare Workers, Prisma, Supabase
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://dslab.postech.ac.kr/}{POSTECH Data Systems Lab}}{Jan 2023 -- Jan 2024}
 
 		{\bfseries{Undergraduate Researcher (Full-stack Web Developer)}}
+    \item 국제 학술지 논문 검색 및 통계 웹사이트 개발
 
-		\item Developed a website serving as an integrated database for an academic conference
-
-		\item Full-time during vacation; part-time during semester
-
-		\item Key Contributions:
+		\item 주요 기여 사항:
 
 		\vspace{-0.5em}
 		\begin{list}{--}{}
 			\itemsep -0.5em
-
-			\item Data engineering for data integration and automation of data pipelines
-
-			\item Full-stack development, including client-side, server-side, and database design/optimization
+			\item 백엔드 및 프론트엔드 개발
+			\item 데이터베이스 설계 및 운영
+			\item 데이터 통합 및 파이프라인 설계
+			\item 웹사이트 배포 및 서버 운영
 		\end{list}
 
-		\item Skills: JavaScript, React.js, Express.js, PostgreSQL, Airflow, Docker, Docker Compose
+		\item 기술 스택: JavaScript, React.js, Express.js, PostgreSQL, Airflow, Docker, Docker Compose
 	\end{rSubsection}
 \end{rSection}
 
 \begin{rSection}{Projects}
 	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED312} {Pintos}}{Sep 2025 -- Dec 2025}
 
-		Educational operating system for 80x86 architecture (based on Stanford CS140)
+		교육용 80x86 아키텍처 운영체제 개발 (Stanford CS140 기반)
 
-		\item Written in C and x86 assembly
-
-		\item Key Implementations:
+		\item 주요 구현 사항:
 		\vspace{-0.5em}
 		\begin{list}{--}{}
 			\itemsep -0.5em
@@ -90,17 +86,16 @@
 			\item Virtual memory system featuring demand paging, stack growth, memory mapped files
 		\end{list}
 
+		\item 사용 기술: C 및 x86 어셈블리
+
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED311} {RISC-V CPU}}{Mar 2025 -- May 2025}
 
-		5-stage pipelined RISC-V CPU implementing a subset of the RV32I ISA
+		5단계 파이프라인 RISC-V CPU (2인 프로젝트)
 
-		\item Collaborated in a 2-person team
-
-		\item Implemented in Verilog HDL
-
-		\item Key Implementations:
+		\item RV32I 명령어 집합의 서브셋 구현 
+		\item 주요 구현 사항:
 		\vspace{-0.5em}
 		\begin{list}{--}{}
 			\itemsep -0.5em
@@ -111,27 +106,23 @@
 
 			\item Direct-mapped cache
 		\end{list}
+		\item 사용 기술: Verilog HDL
 
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED321/tree/main/hw7} {Tiny ML (TML) Compiler}}{May 2025}
 
-		Implemented a compiler backend that translates TML programs into machine code for a virtual machine (Mach)
+    Standard ML (SML) 기반의 함수형 프로그래밍 언어 TML의 컴파일러 백엔드 구현
 
-		\item Functional programming language based on Standard ML (SML)
-
-		\item Compiler written in OCaml
-
-		\item Supports closures, higher-order and recursive functions, recursive datatypes and pattern matching
+		\item 클로저(Closure), 고차 함수 및 재귀 함수, 재귀적 데이터 타입 및 패턴 매칭 지원
+		\item 사용 기술: OCaml
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED353} {Sponge}}{Mar 2025 -- May 2025}
 
-		Educational network stack development project (based on Stanford CS144)
+		교육용 네트워크 스택 개발 프로젝트 (Stanford CS144 기반)
 
-		\item Written in C++
-
-		\item Key Implementations:
+		\item 주요 구현 사항:
 		\vspace{-0.5em}
 		\begin{list}{--}{}
 			\itemsep -0.5em
@@ -142,15 +133,17 @@
 
 			\item ARP \& IP packet processing
 		\end{list}
+
+		\item 사용 기술: C++
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/UniD3-Hackathon-Team4/barokey} {BaroKey}}{Nov 2023}
 
-		Submitted to the 3rd UniDThon Hackathon (Team Project)
+		제3회 유니디톤(UniDThon) 해커톤 출품작 (팀 프로젝트)
 
-		\item Developed a web service that provides users with real-time emergency keywords, such as safety threats or natural disasters, based on their location
+		\item 사용자 위치를 기반으로 안전 위협이나 자연재해 등 실시간 긴급 키워드를 제공하는 웹 서비스 개발
 
-		\item Role: Team Leader, Full-stack Developer (Led Backend \& Infrastructure)
+		\item 역할: {\bfseries{팀장}}, 풀스택 개발자 (프론트엔드 개발 기여, 백엔드 및 인프라 구축 리드)
 	\end{rSubsection}
 \end{rSection}
 

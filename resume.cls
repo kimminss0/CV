@@ -18,11 +18,19 @@
 \let\oldbfseries\bfseries
 \renewcommand{\bfseries}{\oldbfseries\sffamily}
 
-% our document is mainly in English, so we use punctuations from main font; not from hangul font
-\hangulpunctuations=0
+%% our document is mainly in English, so we use punctuations from main font; not from hangul font
+%\hangulpunctuations=0
 
 \setsansfont{Helvetica}
 \setmainhangulfont{NotoSerifCJKkr}[
+	UprightFont=*-Light,
+	BoldFont=*-Bold,
+	Script=Hangul,
+	Language=Korean,
+	AutoFakeSlant,
+]
+
+\setsanshangulfont{NotoSansCJKkr}[
 	UprightFont=*-Light,
 	BoldFont=*-Bold,
 	Script=Hangul,
@@ -58,13 +66,20 @@
 \def \blog#1{\def\@blog{#1}}
 \def \@blog {}
 
+\def \mobile#1{\def\@mobile{#1}}
+\def \@mobile {}
+
 \def \printcontact{
 	\begingroup
 	\centerline{
 		\contactstyle
-		\faEnvelope\space\@email \space$\bullet$
-		\faGithubSquare\space\@github \space$\bullet$
+		\faEnvelope\space\@email
+		\space$\bullet$
+		\faGithubSquare\space\@github
+		\space$\bullet$
 		\faHome\space\@blog
+		% \space$\bullet$
+    % \faMobile\space\@mobile
 	}
 	\endgroup
 }
