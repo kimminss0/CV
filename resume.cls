@@ -17,13 +17,18 @@
 
 \let\oldbfseries\bfseries
 \renewcommand{\bfseries}{\oldbfseries\sffamily}
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.1}
 
 %% our document is mainly in English, so we use punctuations from main font; not from hangul font
 %\hangulpunctuations=0
-
-\setsansfont{Helvetica}
-\setmainhangulfont{NotoSerifCJKkr}[
+\setsansfont{Helvetica}[
 	UprightFont=*-Light,
+	BoldFont=*-Bold,
+]
+
+\setmainhangulfont{NotoSerifCJKkr}[
+	UprightFont=*-DemiLight,
 	BoldFont=*-Bold,
 	Script=Hangul,
 	Language=Korean,
@@ -31,7 +36,7 @@
 ]
 
 \setsanshangulfont{NotoSansCJKkr}[
-	UprightFont=*-Light,
+	UprightFont=*-DemiLight,
 	BoldFont=*-Bold,
 	Script=Hangul,
 	Language=Korean,
@@ -52,7 +57,7 @@
 
 \def \printname {
 	\begingroup
-	\hfil{\namestyle\namesize \@name}\hfil
+	{\namestyle\namesize \@name}\hfil
 	\nameskip\break
 	\endgroup
 }
@@ -71,16 +76,14 @@
 
 \def \printcontact{
 	\begingroup
-	\centerline{
-		\contactstyle
-		\faEnvelope\space\@email
-		\space$\bullet$
-		\faGithubSquare\space\@github
-		\space$\bullet$
-		\faHome\space\@blog
-		% \space$\bullet$
-    % \faMobile\space\@mobile
-	}
+	\contactstyle
+	% \faMobile*\space\@mobile
+	% \space\space\space
+	\faEnvelope[regular]\space\@email
+	\space\space\space
+	\faGithub\space\@github
+	\space\space\space
+	\faLink\space\@blog
 	\endgroup
 }
 
@@ -132,7 +135,7 @@
 
 \def\namestyle{\bfseries}
 \def\contactstyle{\sffamily}
-\def\namesize{\huge}
+\def\namesize{\LARGE}
 \def\nameskip{\bigskip}
 \def\sectionskipbefore{\medskip}
 \def\sectionskipafter{\medskip}
