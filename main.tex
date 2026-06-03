@@ -17,22 +17,6 @@
 	\end{rEducation}
 \end{rSection}
 
-\begin{rSection}{Skills}
-	\begin{tabular}{@{}p{0.25\linewidth}p{0.7\linewidth}}
-		Programming Languages
-		 & TypeScript, C/C++, Python, Go, Java  \\ [0.3em]
-
-		Web
-		 & React.js, Next.js, Express.js        \\ [0.3em]
-
-		Database
-		 & PostgreSQL                           \\ [0.3em]
-
-		Infrastructure
-		 & Docker, Nginx, Linux                 \\ [0.3em]
-	\end{tabular}
-\end{rSection}
-
 \begin{rSection}{Job Experience}
 	\begin{rSubsection}{\href{https://wordbricks.ai}{Wordbricks LLC}}{Jun 2025 -- Aug 2025}
 		\textbf{Intern Full-stack Engineer}
@@ -57,7 +41,8 @@
 			\itemsep -0.5em
 			\item 백엔드 및 프론트엔드 개발
 			\item Airflow 도입하여 데이터 통합 및 파이프라인 설계
-			\item 데이터 시각화를 위한 쿼리 작성 및 그래프 디자인, 개발
+			\item 실시간 데이터 시각화를 위한 쿼리 작성 및 그래프 디자인, 개발
+			\item 데이터 모델링 및 쿼리 최적화
 			\item PostgreSQL Full Text Search(FTS) 활용한 검색 기능 개발, 검색 연산자를 통한 상세검색 지원 도입
 			\item 웹사이트 배포 및 서버 운영, 인프라 장애 대응
 			\item 사용 기술: React.js, Express.js, PostgreSQL, Airflow, Docker, Nginx, Linux
@@ -83,8 +68,23 @@
 			\item Virtual memory system featuring demand paging, stack growth, memory mapped files
 		\end{list}
 
-		\item 사용 기술: C 및 x86 어셈블리
+		\item 사용 기술: C 및 x86 어셈블리, gdb
 
+	\end{rSubsection}
+
+	\begin{rSubsection}{\href{https://github.com/kimminss0/tml-compiler} {Tiny ML (TML) Compiler}}{May 2025}
+
+    Standard ML (SML) 기반의 함수형 프로그래밍 언어 TML의 컴파일러 백엔드 및 타입 시스템 구현
+
+		\item 주요 구현 사항:
+		\vspace{-0.5em}
+		\begin{list}{--}{}
+			\itemsep -0.5em
+			\item Hindley-Milner 타입 시스템
+			\item 클로저(Closure), 고차 함수, 다형성, 재귀 함수 지원
+			\item 재귀적 데이터 타입 정의 및 패턴 매칭 구현
+		\end{list}
+		\item 사용 기술: OCaml
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED311} {RISC-V CPU}}{Mar 2025 -- May 2025}
@@ -105,14 +105,6 @@
 		\end{list}
 		\item 사용 기술: Verilog HDL
 
-	\end{rSubsection}
-
-	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED321/tree/main/hw7} {Tiny ML (TML) Compiler}}{May 2025}
-
-    Standard ML (SML) 기반의 함수형 프로그래밍 언어 TML의 컴파일러 백엔드 구현
-
-		\item 클로저(Closure), 고차 함수 및 재귀 함수, 재귀적 데이터 타입 및 패턴 매칭 지원
-		\item 사용 기술: OCaml
 	\end{rSubsection}
 
 	\begin{rSubsection}{\href{https://github.com/kimminss0/CSED353} {Sponge}}{Mar 2025 -- May 2025}
@@ -142,6 +134,25 @@
 
 		\item 역할: \textbf{팀장}, 풀스택 개발자 (프론트엔드 개발 기여, 백엔드 및 인프라 구축 리드)
 	\end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Skills}
+	\begin{tabular}{@{}p{0.25\linewidth}p{0.7\linewidth}}
+		Programming Languages
+		 & TypeScript, C/C++, Python, Go, Java  \\ [0.3em]
+
+		Web
+		 & React.js, Next.js, Express.js        \\ [0.3em]
+
+		Database
+		 & PostgreSQL                           \\ [0.3em]
+
+		System
+		 & Linux, gdb                           \\ [0.3em]
+
+		Infrastructure
+		 & Docker, Nginx                        \\ [0.3em]
+	\end{tabular}
 \end{rSection}
 
 \end{document}
