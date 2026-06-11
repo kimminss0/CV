@@ -72,17 +72,17 @@
 
 	\end{rSubsection}
 
-	\begin{rSubsection}{\href{https://github.com/kimminss0/tml-compiler} {Tiny ML (TML) Compiler}}{May 2025}
+	\begin{rSubsection}{\href{https://github.com/kimminss0/tml-compiler} {Tiny ML Compiler}}{May 2025}
 
-    Standard ML (SML) 기반의 함수형 프로그래밍 언어 TML의 컴파일러 백엔드 및 타입 시스템 구현
+    Standard ML 기반의 함수형 프로그래밍 언어 Tiny ML의 타입 시스템 및 컴파일러 백엔드 구현
 
 		\item 주요 구현 사항:
 		\vspace{-0.5em}
 		\begin{list}{--}{}
 			\itemsep -0.5em
-			\item Hindley-Milner 타입 시스템
-			\item 클로저(Closure), 고차 함수, 다형성, 재귀 함수 지원
-			\item 재귀적 데이터 타입 정의 및 패턴 매칭 구현
+			\item Hindley-Milner type system based on Algorithm W, featuring let-polymorphism
+			\item Algebraic data types (ADTs) supporting recursive types and pattern matching
+			\item Support for closures, higher-order functions, and recursive functions
 		\end{list}
 		\item 사용 기술: OCaml
 	\end{rSubsection}
