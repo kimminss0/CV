@@ -110,7 +110,7 @@
 }
 
 \newenvironment{rEducation}[2]{
-	{#1} \hfill {\small\it #2}
+	{#1} \hfill {\small #2}
 	\begin{list}{--}{
 			\setlength{\leftmargin}{1.5em}
 			\setlength{\rightmargin}{1.5em}
@@ -123,7 +123,7 @@
 }
 
 \newenvironment{rSubsection}[2]{
-	{\bfseries #1} \hfill {\small\it #2}
+	{\bfseries #1} \hfill {\small #2}
 	\begin{list}{--}{
 			\setlength{\leftmargin}{1.5em}
 			\setlength{\rightmargin}{1.5em}
