@@ -21,7 +21,7 @@
 \linespread{1.1}
 
 % Uncomment below if the document is mainly in English, so that we use punctuations from main font; not from hangul font
-%\hangulpunctuations=0
+\hangulpunctuations=0
 
 \setsansfont{Helvetica}[
 	UprightFont=*-Light,
@@ -110,7 +110,7 @@
 }
 
 \newenvironment{rEducation}[2]{
-	{#1} \hfill {\small #2}
+	{#1} \hfill {\small\it #2}
 	\begin{list}{--}{
 			\setlength{\leftmargin}{1.5em}
 			\setlength{\rightmargin}{1.5em}
@@ -123,7 +123,7 @@
 }
 
 \newenvironment{rSubsection}[2]{
-	{\bfseries #1} \hfill {\small #2}
+	{\bfseries #1} \hfill {\small\it #2}
 	\begin{list}{--}{
 			\setlength{\leftmargin}{1.5em}
 			\setlength{\rightmargin}{1.5em}
