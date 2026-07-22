@@ -20,9 +20,6 @@
 \renewcommand{\familydefault}{\sfdefault}
 \linespread{1.1}
 
-% Uncomment below if the document is mainly in English, so that we use punctuations from main font; not from hangul font
-\hangulpunctuations=0
-
 \setsansfont{Helvetica}[
 	UprightFont=*-Light,
 	BoldFont=*-Bold,
