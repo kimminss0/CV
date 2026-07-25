@@ -26,14 +26,16 @@
 	ItalicFont=*-LightOblique,
 ]
 
+% Note(weight): extralight - light - regular - medium - semibold - bold - black
 \setmainhangulfont{NotoSerifCJKkr}[
-	UprightFont=*-DemiLight,
+	UprightFont=*-Regular,
 	BoldFont=*-Bold,
 	Script=Hangul,
 	Language=Korean,
 	AutoFakeSlant,
 ]
 
+% Note(weight): thin - light - demilight - regular - medium - bold - black
 \setsanshangulfont{NotoSansCJKkr}[
 	UprightFont=*-DemiLight,
 	BoldFont=*-Bold,
