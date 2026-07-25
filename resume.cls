@@ -1,47 +1,63 @@
 \ProvidesClass{resume}[RESUME]
 
-\LoadClass[11pt,letterpaper]{article}
+\LoadClass[11pt,a4paper]{article}
 
-\usepackage[left=1.0cm,top=1.2cm,right=1.0cm,bottom=1.2cm]{geometry}
+\usepackage[margin=1.5cm]{geometry} % or 1.8cm?
 \usepackage[parfill]{parskip}
 
-\usepackage{lmodern}
+\usepackage{fontawesome5}
+\usepackage[regular]{sourcesans}
+
+%%% Alternatives
+% \usepackage{helvet}
+% \usepackage{tgheros}
+% \usepackage{lmodern}
+% \usepackage[regular]{newcomputermodern}
+% \usepackage{libertinus}
+% \usepackage{FiraSans}
+% \usepackage{merriweather}
+%%%
 
 \usepackage{fontspec}
-
-\usepackage{fontawesome5}
-
 \usepackage{kotex}
 
 \pagestyle{empty}
 
-\let\oldbfseries\bfseries
-\renewcommand{\bfseries}{\oldbfseries\sffamily}
+%%% For using serif as default family
+% \let\oldbfseries\bfseries
+% \renewcommand{\bfseries}{\oldbfseries\sffamily}
+%%%
 \renewcommand{\familydefault}{\sfdefault}
-\linespread{1.1}
 
-\setsansfont{Helvetica}[
-	UprightFont=*-Light,
-	BoldFont=*-Bold,
-	ItalicFont=*-LightOblique,
-]
+%%% For helvetica / tghero
+% \setsansfont{TeX Gyre Heros} 
+% \setsansfont{Helvetica}
+% \setsansfont{Helvetica}[
+% 	UprightFont=*-Light,
+% 	BoldFont=*-Bold,
+% 	ItalicFont=*-LightOblique,
+% ]
+% \linespread{1.1}
+%%%
 
 % Note(weight): extralight - light - regular - medium - semibold - bold - black
 \setmainhangulfont{NotoSerifCJKkr}[
-	UprightFont=*-Regular,
-	BoldFont=*-Bold,
+	% UprightFont=*-Regular,
+	% BoldFont=*-Bold,
 	Script=Hangul,
 	Language=Korean,
 	AutoFakeSlant,
+	Scale=0.86,
 ]
 
 % Note(weight): thin - light - demilight - regular - medium - bold - black
 \setsanshangulfont{NotoSansCJKkr}[
-	UprightFont=*-DemiLight,
-	BoldFont=*-Bold,
+	% UprightFont=*-DemiLight,
+	% BoldFont=*-Bold,
 	Script=Hangul,
 	Language=Korean,
 	AutoFakeSlant,
+	Scale=0.86,
 ]
 
 \setmathhangulfont{NotoSansCJKkr}[
@@ -50,7 +66,9 @@
 			{Size=6-9, Font=*},
 			{Size=9-,  Font=*-DemiLight},
 		},
-	Script=Hangul, Language=Korean
+	Script=Hangul,
+	Language=Korean,
+	Scale=0.86,
 ]
 
 \def \name#1{\def\@name{#1}}
@@ -101,7 +119,7 @@
 	\sectionskipafter
 	\hrule
 	\begin{list}{}{
-			\setlength{\leftmargin}{1.5em}
+			\setlength{\leftmargin}{1.0em}
 		}
 		\item[]
 		      }{
@@ -111,8 +129,8 @@
 \newenvironment{rEducation}[2]{
 	{#1} \hfill {\small\it #2}
 	\begin{list}{--}{
-			\setlength{\leftmargin}{1.5em}
-			\setlength{\rightmargin}{1.5em}
+			\setlength{\leftmargin}{1.0em}
+			\setlength{\rightmargin}{1.0em}
 		}
 		\itemsep -0.5em \vspace{-0.5em}
 		\item[]
@@ -124,8 +142,8 @@
 \newenvironment{rSubsection}[2]{
 	{\bfseries #1} \hfill {\small\it #2}
 	\begin{list}{--}{
-			\setlength{\leftmargin}{1.5em}
-			\setlength{\rightmargin}{1.5em}
+			\setlength{\leftmargin}{1.0em}
+			\setlength{\rightmargin}{1.0em}
 		}
 		\itemsep -0.5em \vspace{-0.5em}
 		\item[]
