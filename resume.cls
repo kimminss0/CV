@@ -40,10 +40,20 @@
 % \linespread{1.1}
 %%%
 
+\xetexkofontregime {latin}[
+	puncts=prevfont,
+	colons=prevfont,
+	cjksymbols=hangul,
+]
+
 % Note(weight): extralight - light - regular - medium - semibold - bold - black
-\setmainhangulfont{NotoSerifCJKkr}[
-	% UprightFont=*-Regular,
-	% BoldFont=*-Bold,
+\setmainhangulfont{Noto Serif CJK KR}[
+	ThinFont=* ExtraLight,
+	LightFont=* Light,
+	UprightFont=*,
+	MediumFont=* Medium,
+	BoldFont=* Bold,
+	HeavyFont=* Black,
 	Script=Hangul,
 	Language=Korean,
 	AutoFakeSlant,
@@ -51,20 +61,24 @@
 ]
 
 % Note(weight): thin - light - demilight - regular - medium - bold - black
-\setsanshangulfont{NotoSansCJKkr}[
-	% UprightFont=*-DemiLight,
-	% BoldFont=*-Bold,
+\setsanshangulfont{Noto Sans CJK KR}[
+	ThinFont=* Thin,
+	LightFont=* Light,
+	UprightFont=*,
+	MediumFont=* Medium,
+	BoldFont=* Bold,
+	HeavyFont=* Black,
 	Script=Hangul,
 	Language=Korean,
 	AutoFakeSlant,
 	Scale=0.86,
 ]
 
-\setmathhangulfont{NotoSansCJKkr}[
+\setmathhangulfont{Noto Sans CJK KR}[
 	SizeFeatures={
-			{Size=-6,  Font=*-Medium},
+			{Size=-6,  Font=* Medium},
 			{Size=6-9, Font=*},
-			{Size=9-,  Font=*-DemiLight},
+			{Size=9-,  Font=* DemiLight},
 		},
 	Script=Hangul,
 	Language=Korean,
